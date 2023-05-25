@@ -1,0 +1,33 @@
+--Create a grocery store database
+CREATE TABLE buchi (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, aisle INTEGER, size TEXT);
+INSERT INTO buchi VALUES
+(1, "t_shirt", 20, 1, "Extra_large"), 
+(2, "Long_Sleeve_Shirt", 40, 2, "Large"),
+(3, "Pants", 50, 3, "Medium"),
+(4, "Polo", 60, 2, "Medium"),
+(5, "Short_Sleeve", 30, 1, "Large"), 
+(6, "Under_wear", 10, 3, "medium"),
+(7, "Skirt", 10, 1, "Extra_Large"), 
+(8, "Suit", 100, 4, "Large"),
+(9, "Boxers", 10, 4, "Small"), 
+(10, "V_neck", 20, 1, "medium"), 
+(11, "Gown", 200, 4, "Extra_large"), 
+(12, "Sweater", 210, 4, "Large"),
+(13, "Cap", 9, 1, "Large"),
+(14, "Trouser", 25, 2, "Small"), 
+(15, "Skirt", 30, 4, "large");
+
+--display the database ordered by price
+SELECT * FROM buchi 
+ORDER BY price desc;
+
+--what is the avg price of items in the bulk section? 
+--SELECT AVG(price) "avg bulk item price"
+--FROM store
+--where section='bulk'; 
+
+--what are the most 5 popular items? 
+SELECT name, price, size
+FROM buchi
+order by price desc
+limit 5; 

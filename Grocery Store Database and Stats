@@ -21,10 +21,6 @@ INSERT INTO buchi VALUES
 SELECT * FROM buchi 
 ORDER BY price desc;
 
---what is the avg price of items in the bulk section? 
---SELECT AVG(price) "avg bulk item price"
---FROM store
---where section='bulk'; 
 
 --what are the most 5 popular items? 
 SELECT name, price, size

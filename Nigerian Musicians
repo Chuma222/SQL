@@ -31,3 +31,9 @@ SELECT * FROM nigerian_musicians;
 SELECT stage_name, title
  FROM nigerian_musicians, songs
  WHERE nigerian_musicians.id = songs.artist_id;
+
+
+ SELECT nigerian_musicians.stage_name, songs.title
+ FROM nigerian_musicians
+ JOIN songs
+ ON nigerian_musicians.id = songs.id;

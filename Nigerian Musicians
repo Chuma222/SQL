@@ -1,0 +1,33 @@
+CREATE TABLE nigerian_musicians (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    stage_name TEXT,
+    real_name TEXT
+); 
+INSERT INTO nigerian_musicians (stage_name, real_name) VALUES ("davido", "david adeleke");
+INSERT INTO nigerian_musicians (stage_name, real_name) VALUES ("wizkid", "ayodeji balogun");
+INSERT INTO nigerian_musicians (stage_name, real_name) VALUES ("Burna boy", "damini ogulu");
+INSERT INTO nigerian_musicians (stage_name, real_name) VALUES ("tiwa savage", "tiwatope balogun");
+INSERT INTO nigerian_musicians (stage_name, real_name) VALUES ("flavor", "chinedu okoli");
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    artist_id INTEGER,
+    title TEXT,
+    release_year INTEGER,
+    views NUMERIC
+); 
+INSERT INTO songs (artist_id, title, release_year, views) 
+   VALUES (1, "fire", 2018, 851);
+INSERT INTO songs (artist_id, title, release_year, views) 
+   VALUES (2, "essence", 2020, 10000);
+INSERT INTO songs (artist_id, title, release_year, views) 
+   VALUES (3, "ye", 2019, 100000);INSERT INTO songs (artist_id, title, release_year, views) 
+   VALUES (4, "somebody's son", 2022, 20000);
+INSERT INTO songs (artist_id, title, release_year, views) 
+   VALUES (5, "nabania", 2010, 300000);
+   
+SELECT * FROM nigerian_musicians;
+
+SELECT stage_name, title
+ FROM nigerian_musicians, songs
+ WHERE nigerian_musicians.id = songs.artist_id;
